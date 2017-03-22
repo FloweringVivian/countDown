@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>倒计时</title>
+<link rel="stylesheet" type="text/css" href="css/tryout.css">
+</head>
+<body>
+<!-- 倒计时 start -->
+<div class="try_countdown clearfix">
+    <div class="try_fl">剩余时间：</div>
+    <div id="countdown_dashboard">
+        <div class="dash days_dash">                            
+            <div class="digit"></div>
+            <div class="digit"></div>
+            <span class="dash_title">天</span>
+        </div>
+        <div class="dash hours_dash">                            
+            <div class="digit"></div>
+            <div class="digit"></div>
+            <span class="dash_title">时</span>
+        </div>
+
+        <div class="dash minutes_dash">                            
+            <div class="digit"></div>
+            <div class="digit"></div>
+            <span class="dash_title">分</span>
+        </div>
+        <div class="dash seconds_dash">                            
+            <div class="digit"></div>
+            <div class="digit"></div>
+            <span class="dash_title">秒</span>
+        </div>
+    </div>
+</div>
+<!-- 倒计时 end -->
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.Countdown.js"></script>
+<script type="text/javascript">
+$(function(){
+    // 倒计时
+    $('#countdown_dashboard').countDown({
+        targetDate: {
+            'day':      5,
+            'month':    5,
+            'year':     2017,
+            'hour':     0,
+            'min':      0,
+            'sec':      0                   
+        },
+        //serverTime: time_server_Date,  //服务器时间
+        onComplete: function(){  //倒计时完成后
+            alert("倒计时完成");
+        }
+    });
+})
+</script>
+</body>
+</html>
